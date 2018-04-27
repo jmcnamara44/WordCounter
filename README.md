@@ -26,7 +26,7 @@ _The method should only return a match if the word is a one-for-one match with a
 
 ## Known Bugs
 
-_No known bugs as of yet._
+_I ran out of time before I could make the webpage include functionality to allow users to distinguish between a case-sensitive search and a non case-sensitive search._
 
 ## Support and contact details
 
