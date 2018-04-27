@@ -35,10 +35,19 @@ namespace WordCounter.Tests
       Assert.AreEqual(1, testList.Count);
     }
     [TestMethod]
-    public void RepeatCounterClassAndGetWord_ComparesLetterWithHardCoded_A()
+    public void StringContains_ComparesLetterWithLetter_A()
     {
       string testLetter1 = "A";
       string testLetter2 = "A";
+      Word testLetter3 = new Word(testLetter1, testLetter2);
+
+      Assert.AreEqual(true, testLetter3.StringContains(testLetter3));
+    }
+    [TestMethod]
+    public void StringContains_ComparesLetterWithSentence_A()
+    {
+      string testLetter1 = "A";
+      string testLetter2 = "BRACKET";
       Word testLetter3 = new Word(testLetter1, testLetter2);
 
       Assert.AreEqual(true, testLetter3.StringContains(testLetter3));
