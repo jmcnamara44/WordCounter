@@ -36,7 +36,16 @@ namespace WordCounter.Models
         }
         public bool StringContains(Word word)
         {
-          return word.GetSentence().Contains(word.GetWord());
+          // return word.GetSentence().Contains(word.GetWord());
+          string[] array = word.GetSentence().Split(' ');
+          foreach(string sentence in array)
+          {
+            if (word.GetWord() == sentence)
+            {
+              return true;
+            }
+          }
+          return false;
         }
         public static List<Word> GetAll()
         {
@@ -50,6 +59,14 @@ namespace WordCounter.Models
         {
           return word.GetWord();
         }
+        // public int RepeatCounter()
+        // {
+        //   if (StringContains(Word word))
+        //   {
+        //     char[] array = word.GetSentence().ToCharArray();
+        //     Word arrayToString = new Word(String.Join(" ", Array));
+        //   }
+        // }
     }
 
     // public class RepeatCounter  //I am currently unable to call methods from the Word class and use them in the RepeatCounter class

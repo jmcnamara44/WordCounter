@@ -12,12 +12,13 @@ _This project will use C# to test different specs of the webpage._
 
 //_When the user enters a word they should receive that word back._
 //_When the user enters a word and a sentence they should receive both of those back._
-_The user enters a letter this should be checked to a hard-coded letter to see if it matches._
-_The user enters a letter this should be checked to a hard-coded string to see if it contains it._
-_The user enters a letter and a string, the letter should be checked against the string to see if it contains it._
+//_The user enters a letter this should be checked to a hard-coded letter to see if it matches._
+//_The user enters a letter this should be checked to a hard-coded string to see if it contains it._
+//_The user enters a letter and a string, the letter should be checked against the string to see if it contains it._
 _The user enters a letter and a string, the letter should be checked against the string and return how many times it appears._
 _The user enters a letter and a string, the letter should be checked against the string and return how many times it appears and this should be returned to the user on the page._
-_Regardless of upper or lower case the tests should yield results._
+_Regardless of upper or lower case the tests should yield the same results._
+_The method should only return a match if the word is a one-for-one match with a word in the sentence, not a match to characters within another word._
 
 ## Setup/Installation Requirements
 
