@@ -10,7 +10,7 @@ namespace WordCounter.Tests
   {
     public void Dispose()
     {
-      Word.ClearAll();
+
     }
     [TestMethod]
     public void One_ReturnWord_ReturnsWord_Word()
@@ -26,13 +26,10 @@ namespace WordCounter.Tests
       string testWord1 = "abc";
       string testSentence1 = "this is a sentence";
       Word test = new Word(testWord1, testSentence1);
-      test.Save();
-      List<Word> testList = Word.GetAll();
       string testWord2 = "abc";
       string testSentence2 = "this is a sentence";
-      Assert.AreEqual(testWord2, testList[0].GetWord());
-      Assert.AreEqual(testSentence2, testList[0].GetSentence());
-      Assert.AreEqual(1, testList.Count);
+      Assert.AreEqual(testWord2, test.GetWord());
+      Assert.AreEqual(testSentence2, test.GetSentence());
     }
     [TestMethod]
     public void Three_StringContains_ComparesLetterWithLetter_A()

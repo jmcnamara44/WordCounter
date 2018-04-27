@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Enter a word and a sentence to see how often that word appears within the sentence.</h1>
+
+<form action="/results" method="post">
+  <div class="form-group">
+    <label for="word">Enter your word</label>
+    <input id="word" name="word" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="sentence">Enter your sentence</label>
+    <input id="sentence" name="sentence" class="form-control" type="text">
+  </div>
+  <button class="btn btn-primary" type="submit">Check</button>
+</form>

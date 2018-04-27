@@ -9,11 +9,11 @@ namespace WordCounter.Models
         private string _word;
         private string _sentence;
         private int _matchCounter;
-        private static List<Word> _strings = new List<Word> {};
         public Word(string word, string sentence)
         {
           _word = word;
           _sentence = sentence;
+          _matchCounter = 0;
         }
         public string GetWord()
         {
@@ -31,9 +31,13 @@ namespace WordCounter.Models
         {
           _sentence = newSentence;
         }
-        public void Save()
+        public int GetMatchCounter()
         {
-          _strings.Add(this);
+          return _matchCounter;
+        }
+        public void SetMatchCounter(int newMatchCounter)
+        {
+          _matchCounter = newMatchCounter;
         }
         public bool StringContains(Word word)
         {
@@ -46,14 +50,6 @@ namespace WordCounter.Models
             }
           }
           return false;
-        }
-        public static List<Word> GetAll()
-        {
-          return _strings;
-        }
-        public static void ClearAll()
-        {
-          _strings.Clear();
         }
         public string ReturnWord(Word word)
         {

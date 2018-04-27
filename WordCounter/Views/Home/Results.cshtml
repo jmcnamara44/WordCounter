@@ -1,0 +1,9 @@
+@{
+  Layout = "_Layout";
+}
+<h3>Results</h3>
+<p>Word to search for: @Model.GetWord()</p>
+<p>Sentence to search in: @Model.GetSentence()</p>
+<p>Number of times "@Model.GetWord()" appears in "@Model.GetSentence()": @Model.GetMatchCounter().</p>
+
+<p><a href="/">Search for another word in different sentence</a></p>
