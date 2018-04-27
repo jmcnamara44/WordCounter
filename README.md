@@ -10,7 +10,7 @@ _This project will use C# to test different specs of the webpage._
 
 ## Project Specs
 
-_When the user enters a word they should receive that word back._
+//_When the user enters a word they should receive that word back._
 _When the user enters a word and a sentence they should receive both of those back._
 _The user enters a letter this should be checked to a hard-coded letter to see if it matches._
 _The user enters a letter this should be checked to a hard-coded string to see if it contains it._
