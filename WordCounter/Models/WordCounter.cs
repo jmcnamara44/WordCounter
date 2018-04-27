@@ -77,7 +77,7 @@ namespace WordCounter.Models
         }
     }
 
-    // public class RepeatCounter  //I am currently unable to call methods from the Word class and use them in the RepeatCounter class
+    // public class RepeatCounter  //I am currently unable to call methods from the Word class and use them in the RepeatCounter class.  It kept giving me errors when I tried to have it outside of the Word class.
     // {
     // }
 }
