@@ -8,6 +8,7 @@ namespace WordCounter.Models
     {
         private string _word;
         private string _sentence;
+        private int _matchCounter;
         private static List<Word> _strings = new List<Word> {};
         public Word(string word, string sentence)
         {
@@ -36,7 +37,6 @@ namespace WordCounter.Models
         }
         public bool StringContains(Word word)
         {
-          // return word.GetSentence().Contains(word.GetWord());
           string[] array = word.GetSentence().Split(' ');
           foreach(string sentence in array)
           {
@@ -59,14 +59,26 @@ namespace WordCounter.Models
         {
           return word.GetWord();
         }
-        // public int RepeatCounter()
-        // {
-        //   if (StringContains(Word word))
-        //   {
-        //     char[] array = word.GetSentence().ToCharArray();
-        //     Word arrayToString = new Word(String.Join(" ", Array));
-        //   }
-        // }
+        public int RepeatCounter(Word word)
+        {
+          if (StringContains(word))
+          {
+            _matchCounter = 0;
+            string[] sentenceArray1 = word.GetSentence().Split(' ');
+            foreach(string sentence in sentenceArray1)
+            {
+              if (word.GetWord() == sentence)
+              {
+                _matchCounter +=1;
+              }
+            }
+          }
+          else
+          {
+            return 0;
+          }
+          return _matchCounter;
+        }
     }
 
     // public class RepeatCounter  //I am currently unable to call methods from the Word class and use them in the RepeatCounter class

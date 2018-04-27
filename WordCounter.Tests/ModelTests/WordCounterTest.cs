@@ -61,14 +61,14 @@ namespace WordCounter.Tests
 
       Assert.AreEqual(true, testLetter3.StringContains(testLetter3));
     }
-    // [TestMethod]
-    // public void Six_RepeatCounter_CountsStringOccurencesWithinSentence_Three()
-    // {
-    //   string testLetter1 = "Ale";
-    //   string testLetter2 = "BRACKET Ale is ale";
-    //   Word testLetter3 = new Word(testLetter1, testLetter2);
-    //
-    //   Assert.AreEqual(true, testLetter3.StringContains(testLetter3));
-    // }
+    [TestMethod]
+    public void Six_RepeatCounter_CountsStringOccurencesWithinSentence_Three()
+    {
+      string testLetter1 = "Ale";
+      string testLetter2 = "Ale Ale Alex Ale ale";
+      Word testLetter3 = new Word(testLetter1, testLetter2);
+
+      Assert.AreEqual(3, testLetter3.RepeatCounter(testLetter3));
+    }
   }
 }
