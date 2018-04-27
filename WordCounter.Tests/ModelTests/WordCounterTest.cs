@@ -52,5 +52,14 @@ namespace WordCounter.Tests
 
       Assert.AreEqual(true, testLetter3.StringContains(testLetter3));
     }
+    [TestMethod]
+    public void StringContains_ComparesStringWithSentence_True()
+    {
+      string testLetter1 = "Ale";
+      string testLetter2 = "BRACKET Ale is ale";
+      Word testLetter3 = new Word(testLetter1, testLetter2);
+
+      Assert.AreEqual(true, testLetter3.StringContains(testLetter3));
+    }
   }
 }
