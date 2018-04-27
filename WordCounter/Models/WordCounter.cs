@@ -4,12 +4,12 @@ using System;
 
 namespace WordCounter.Models
 {
-    public class RepeatCounter
+    public class Word
     {
         private string _word;
         private string _sentence;
-        private static List<RepeatCounter> _strings = new List<RepeatCounter> {};
-        public RepeatCounter(string word, string sentence)
+        private static List<Word> _strings = new List<Word> {};
+        public Word(string word, string sentence)
         {
           _word = word;
           _sentence = sentence;
@@ -30,15 +30,15 @@ namespace WordCounter.Models
         {
           _sentence = newSentence;
         }
-        public string ReturnWord(RepeatCounter word)
-        {
-          return word.GetWord();
-        }
         public void Save()
         {
           _strings.Add(this);
         }
-        public static List<RepeatCounter> GetAll()
+        public bool StringContains(Word word)
+        {
+          return word.GetSentence().Contains(word.GetWord());
+        }
+        public static List<Word> GetAll()
         {
           return _strings;
         }
@@ -46,5 +46,13 @@ namespace WordCounter.Models
         {
           _strings.Clear();
         }
+        public string ReturnWord(Word word)
+        {
+          return word.GetWord();
+        }
     }
+
+    // public class RepeatCounter  //I am currently unable to call methods from the Word class and use them in the RepeatCounter class
+    // {
+    // }
 }
