@@ -22,7 +22,10 @@ _The method should only return a match if the word is a one-for-one match with a
 ## Setup/Installation Requirements
 
 * _Clone repository from GitHub_
-* _Open .cshtml files into your browser of choice_
+* _Start the MAMP servers._
+* _Navigate into the project folder and run 'dotnet restore'._
+* _Run the command 'dotnet run'._
+* _Type 'http://localhost:5000' into your web browser._
 
 ## Known Bugs
 
@@ -37,8 +40,6 @@ _Contact Jimmy with any questions or comments_
 _HTML_
 _CSS_
 _Bootstrap_
-_JavaScript_
-_jQuery_
 _CSharp_
 
 ### License
